@@ -6,7 +6,7 @@
 package gittest2;
 
 /**
- *
+ * Ok, let's make some minor changes to the code and update Github shall we? :)
  * @author cybon
  */
 public class GitTest2 {
