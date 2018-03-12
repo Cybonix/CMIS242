@@ -11,12 +11,15 @@ package gittest2;
  * @author cybon
  */
 public class GitTest2 {
+    
+    int i = 100; // an instanced variable
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         System.out.println("Hello world~!");
+        System.out.print(i); // This instanced variable cannot be refferenced.
         
     }
     
