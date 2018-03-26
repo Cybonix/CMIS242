@@ -17,13 +17,12 @@ public class Salesman extends Employee
         @Override
         public double annualSalary() 
         {
-            if (annualSales > 1000000) 
-            {
-                annualSales = 1000000;
+            double commission = annualSales * 0.02;
+            if (commission > 20000) {
+                commission = 20000;
             }
-            
-            double smanSalary =  (annualSales * 0.02) + super.annualSalary();
-        return smanSalary;
+            double smanSalary = commission + super.annualSalary();
+            return smanSalary;
         }
         
         @Override

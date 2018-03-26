@@ -19,13 +19,11 @@ public class Executive extends Employee
     {
         double execSalary;
         
-        if (stockPrice > 50) 
-        {
+        if (stockPrice > 50) {
             execSalary = 30000 + super.annualSalary();
-        } else 
-            {
-                execSalary = super.annualSalary();
-            }
+        } else {
+            execSalary = super.annualSalary();
+        }
         
         return execSalary;
     }
@@ -33,8 +31,8 @@ public class Executive extends Employee
     @Override
     public String toString()
     {
-        String strg = "";
-        
-        return strg;
+        String strg = super.toString() 
+                    + " This Executive's stock price is " + stockPrice + ".";
+            return strg;
     }
 }
