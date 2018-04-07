@@ -38,6 +38,7 @@ public class GUI extends JFrame
         withdraw = new JButton("Withdraw");
         deposit = new JButton("Deposit");
         balance = new JButton("Balance");
+        transfer = new JButton("Transfer to");
         
         second.add(withdraw);
         second.add(deposit);
