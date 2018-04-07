@@ -8,7 +8,7 @@ import javax.swing.*;
  * 
  * Creates GUI for the ATM transactions
  */
-public class GUI extends JFrame
+public class ATM extends JFrame
 {
     //Private variables for GUI
     private JButton withdraw;
@@ -23,7 +23,7 @@ public class GUI extends JFrame
     static Account savingAccount;
     
     //constructor to create GUI
-    public  GUI()
+    public  ATM()
     {
         //creates visible panels
         super("ATM Machine");
@@ -151,10 +151,10 @@ public class GUI extends JFrame
     public static void main(String[] args) 
     {
         // Create the accounts
-        checkingAccount = new Account( 0);
-        savingAccount = new Account( 0);
+        checkingAccount = new Account(0);
+        savingAccount = new Account(0);
         
-        GUI finish = new GUI();
+        ATM finish = new ATM();
         finish.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         finish.pack();
         finish.setVisible(true);
