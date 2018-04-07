@@ -7,7 +7,7 @@ public class Account
     private double balance;
     private int withdrawals;
     
-    //crate account constructor
+    //create account constructor
     public Account(double initialBalance)
     {
         balance = initialBalance;
