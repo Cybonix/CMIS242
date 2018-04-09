@@ -1,0 +1,7 @@
+This very simple program utilizes the ActionListener and the KeyListener interface. 
+I will only be using one of three methods from the KeyListener implementation. 
+The keyPressed() method.
+
+This program is looking for a keyboard input, which is registered to the KeyListener as a "keycode."
+
+Can you figure out which one's the "Fire" button?  :D
