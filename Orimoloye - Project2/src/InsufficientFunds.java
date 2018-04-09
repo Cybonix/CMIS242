@@ -3,6 +3,7 @@ import javax.swing.JOptionPane;
 
 /**
  * @author Mark Orimoloye
+ * 08 April 2018
  * Handles all exceptions
  */
 public class InsufficientFunds extends Exception 

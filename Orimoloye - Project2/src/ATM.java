@@ -5,8 +5,9 @@ import javax.swing.*;
 
 /**
  * @author Mark Orimoloye
- * 
- * Creates GUI for the ATM transactions
+ * 08 April 2018
+ * Creates GUI for the ATM transactions, contains the event handlers
+ * and main method.
  */
 public class ATM extends JFrame
 {
