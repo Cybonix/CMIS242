@@ -18,7 +18,7 @@ public class Week8
                System.out.printf("%s ", x);
            
            // Converting the candies array into a linked list
-           LinkedList<String> thelist = new LinkedList<String>(Arrays.asList(candies));
+           LinkedList<String> thelist = new LinkedList<>(Arrays.asList(candies));
            
            // Now, we can use list and collection methods on the array... Cool~!
            thelist.add("Jawbreakers");
