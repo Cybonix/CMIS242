@@ -10,7 +10,7 @@ import javax.swing.*;
  */
 public class GUI extends JFrame implements ActionListener 
 {
-
+    // Array and GUI Objects declared and initialized
     private String[] operationComboBoxChoices = {"Insert", "Delete", "Update", "Find"};
     private JComboBox operationTypesComboBox = new JComboBox(operationComboBoxChoices);
     private JButton processButton = new JButton("Process Request");
@@ -19,6 +19,7 @@ public class GUI extends JFrame implements ActionListener
     private JTextField majorField = new JTextField();
     private HashMap<String, Student> resultMap = new HashMap<String, Student>();
 
+    // Gui constructor
     public GUI() 
     {
         super("Student Record Database");
@@ -39,6 +40,7 @@ public class GUI extends JFrame implements ActionListener
         pack();
         setVisible(true);
         setSize(400,200);
+        setLocationRelativeTo(null);
     }
 
     void setBoxes(boolean id, boolean name, boolean major) 
@@ -61,12 +63,14 @@ public class GUI extends JFrame implements ActionListener
             majorField.setText("");
         }
     }
-
+    
+    // MAIN PROGRAM
     public static void main(String[] args) 
     {
         new GUI();
     }
 
+    //
     @Override
     public void actionPerformed(ActionEvent e) 
     {
@@ -89,14 +93,14 @@ public class GUI extends JFrame implements ActionListener
             
             if (strId.length() == 0) 
             {
-                displayMessage("Enter idField");
+                displayMessage("Enter Id Information");
                 return;
             }
             if (command == 0) 
             {
                 if (resultMap.containsKey(strId)) 
                 {
-                    displayMessage("Student with this idField already added in database.");
+                    displayMessage("This student info already exist in database.");
                     return;
                 }
                 
@@ -105,7 +109,7 @@ public class GUI extends JFrame implements ActionListener
                 
                 if (strName.length() == 0) 
                 {
-                    displayMessage("Enter nameField");
+                    displayMessage("Enter Student Name");
                     return;
                 }
                 if (strMajor.length() == 0) 
@@ -115,13 +119,13 @@ public class GUI extends JFrame implements ActionListener
                 }
                 
                 resultMap.put(strId, new Student(strName, strMajor));
-                displayMessage("Student information added");
+                displayMessage("Student information Entered");
             } 
             else 
             {
                 if (!resultMap.containsKey(strId)) 
                 {
-                    displayMessage("Student idField not found in database.");
+                    displayMessage("Student info not found in database.");
                     return;
                 }
                 if (command == 1) 
@@ -153,13 +157,13 @@ public class GUI extends JFrame implements ActionListener
         }
     }
 
-    // Method to display message
+    // Displays messages
     public void displayMessage(String s) 
     {
         JOptionPane.showMessageDialog(null, s);
     }
 
-    // Method to return blank string if null
+    // If the string is Null, return a blank
     public String getSafeString(String s) 
     {
         if (s == null) 
@@ -169,7 +173,7 @@ public class GUI extends JFrame implements ActionListener
         return s.trim();
     }
 
-    // Method to recieve non-negative numeric input from user
+    // Method to ensure a non-negative numeric input from user
     public int getIntUsingPane(String msg) 
     {
         int num = 0;
